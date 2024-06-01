@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../imgs/fondo.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 100px;
+
+  
+}
+
+/* Formulario */
+
+#Tabla,
+#contenedor_formulario_card {
+  opacity: 0.8;
+}
+#preview {
+  width: 100%;
+  max-width: 550px;
+  
+  object-position: top;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  @media screen and (min-width: 100px) {
+    width: 40%;
+  }
+}
+
+#Tabla,
+#contenedor_formulario_card {
+  opacity: 10;
+}
+
+/* Tabla de Participantes */
+#Tabla {
+  max-width: 957px;
+  height: 800px;
+
+}
+#Animales {
+  height: 100%;
+  background: #f0f0f0;
+}
+
+#Animales div div {
+  transition: all 200ms;
+}
+
+#Animales div > div:hover:not(.animal_insertado_close) {
+  box-shadow: 0px 1px 5px 1px;
+}
+
+.participante {
+  max-width: 30%;
+}
+
+#comentarios {
+  resize: none;
+  height: 150px;
+}
+
+
+.modal-body {
+  color: white;
+  text-align: center;
+}
+
+.modal-body img {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+.modal-body_comentarios_contenido {
+  height: 5rem;
+  overflow-y: auto;
+  word-wrap: break-word;
+  width: 100%;
+}
+.modal-body_comentarios_titulo {
+  text-decoration: underline;
+}
+
+/*
+Estilos Imagenes Insertadas al Area
+*/
+.animal_insertado {
+  width: 150px;
+  position: relative;
+  height: fit-content;
+}
+
+.animal_insertado_close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: white;
+  cursor: pointer;
+}
+
+.animal_insertado img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+.animal_insertado button {
+  width: 100%;
+  background-color: #eee;
+  border: 0;
+}
+.animal_insertado button:hover {
+  background-color: green;
+  color: white;
+}
+.contenedor_animales {
+  gap: 10px;
+
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
